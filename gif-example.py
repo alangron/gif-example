@@ -10,7 +10,7 @@ import matplotlib.patches as mpatches
 
         
 def hex_map(img_count):
-    for offset in range(img_count,0,-1):
+    for offset in range(img_count,-1,-1):
         #  pull data from the COVID API
         df = pd.read_csv('https://api.coronavirus.data.gov.uk/v2/data?areaType=ltla&metric=newCasesBySpecimenDateRollingRate&format=csv')
         df['date'] = pd.to_datetime(df['date'],errors = 'coerce')
